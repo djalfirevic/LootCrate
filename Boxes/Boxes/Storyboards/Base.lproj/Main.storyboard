@@ -119,8 +119,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQk-sR-7MP">
                                                     <rect key="frame" x="320" y="435" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="4Wz-sL-kwN"/>
-                                                        <constraint firstAttribute="height" constant="40" id="hq1-4X-8sF"/>
+                                                        <constraint firstAttribute="width" secondItem="SQk-sR-7MP" secondAttribute="height" multiplier="1:1" id="Dk4-Jr-xtQ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -156,7 +155,9 @@
                                                 <constraint firstItem="wmZ-Hw-QFs" firstAttribute="width" secondItem="v4N-Ce-brT" secondAttribute="width" id="Fd8-xQ-fs2"/>
                                                 <constraint firstItem="Wxy-UF-JhH" firstAttribute="top" secondItem="v4N-Ce-brT" secondAttribute="bottom" constant="15" id="HHJ-cN-8ef"/>
                                                 <constraint firstItem="tH2-DI-zeb" firstAttribute="leading" secondItem="86M-3S-IuZ" secondAttribute="leading" id="Lta-xL-D48"/>
+                                                <constraint firstAttribute="bottom" secondItem="SQk-sR-7MP" secondAttribute="bottom" constant="24.5" id="M1d-hJ-Akm"/>
                                                 <constraint firstItem="Wxy-UF-JhH" firstAttribute="trailing" secondItem="VKv-ze-SwD" secondAttribute="trailingMargin" id="Qeb-np-HhH"/>
+                                                <constraint firstItem="SQk-sR-7MP" firstAttribute="height" secondItem="Wxy-UF-JhH" secondAttribute="height" id="RTs-7H-yEk"/>
                                                 <constraint firstItem="tH2-DI-zeb" firstAttribute="top" secondItem="86M-3S-IuZ" secondAttribute="bottom" constant="8" id="T8g-Mv-UcW"/>
                                                 <constraint firstItem="PXL-78-Neg" firstAttribute="top" secondItem="v4N-Ce-brT" secondAttribute="bottom" constant="10" id="aMN-NL-wkY"/>
                                                 <constraint firstItem="Wxy-UF-JhH" firstAttribute="leading" secondItem="PXL-78-Neg" secondAttribute="trailing" constant="16" id="bXQ-38-f8u"/>
