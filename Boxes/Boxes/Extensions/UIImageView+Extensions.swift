@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-var cache = [String: UIImage]()
+let cache = NSCache<AnyObject, AnyObject>()
 extension UIImageView {
     
     func loadImage(from imageUrl: String) {
-        if let image = cache[imageUrl] {
+        if let image = cache.object(forKey: imageUrl as AnyObject) as? UIImage {
             self.image = image
             return
         }
@@ -26,7 +26,7 @@ extension UIImageView {
                     if let data = data, url.absoluteString == imageUrl {
                         if let image = UIImage(data: data) {
                             self?.image = image
-                            cache[imageUrl] = image
+                            cache.setObject(image, forKey: imageUrl as AnyObject)
                         }
                     }
                 }
