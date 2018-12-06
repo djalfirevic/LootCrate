@@ -26,8 +26,11 @@ class PostsViewController: UIViewController {
     // MARK: - Private API
     private func configureTableView() {
         tableView.tableFooterView = UIView()
-        postsViewModel.fetchPosts { [weak self] in
-            self?.tableView.reloadData()
+        
+        postsViewModel.fetchUsers { [weak self] in
+            self?.postsViewModel.fetchPosts {
+                self?.tableView.reloadData()
+            }
         }
     }
     

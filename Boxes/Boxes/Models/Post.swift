@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Post: Codable {
+class Post: Codable {
     
     // MARK: - Properties
     var title: String
@@ -23,5 +23,5 @@ struct Post: Codable {
         case imageURL
         case comments
     }
-    
+
 }
