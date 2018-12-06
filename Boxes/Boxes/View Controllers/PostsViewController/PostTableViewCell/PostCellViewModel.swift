@@ -19,7 +19,7 @@ struct PostCellViewModel {
         return post.title
     }
     var date: String {
-        return post.datePosted.string
+        return post.datePosted
     }
     var authorImageURL: String {
         if let author = post.author {

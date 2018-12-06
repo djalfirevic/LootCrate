@@ -8,4 +8,4 @@
 
 import Foundation
 
-struct Comment {}
+struct Comment: Codable {}

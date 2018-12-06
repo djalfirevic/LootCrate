@@ -54,3 +54,19 @@ extension PostsViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
 }
+
+extension PostsViewController: UIScrollViewDelegate {
+    
+    // MARK: - UIScrollViewDelegate
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= 10.0 && postsViewModel.shouldFetchNewPosts() {
+            postsViewModel.fetchPosts { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+}

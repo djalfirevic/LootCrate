@@ -17,11 +17,12 @@ enum HttpMethod: String {
     case delete = "DELETE"
 }
 
+let USERS_BASE_PATH = "https://reqres.in"
+
 class RESTManager {
     
     // MARK: - Properties
     static let shared = RESTManager()
-    private let basePath = "https://reqres.in"
     
     // MARK: - Initializer
     private init() {}
@@ -35,9 +36,7 @@ class RESTManager {
  
     func makeRequest<T: Codable>(from urlString: String, httpBody: Data?, completion: @escaping (_ object: T?, _ error: Error?) -> ()) {
         if hasInternetConnection() {
-            let fullPath = "\(basePath)\(urlString)"
-
-            guard let encoded = fullPath.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) else {
+            guard let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: encoded) else {
                 fatalError("🛑 URL not formed")
             }
             

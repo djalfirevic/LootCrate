@@ -23,7 +23,7 @@ class BoxesTests: XCTestCase {
     func testFetchUsers() {
         let requestExpectation = expectation(description: "Fetch Users Request")
         
-        api.makeRequest(from: "/api/users?page=1", httpBody: nil) { (_ response: UsersResponse?, _ error: Error?) in
+        api.makeRequest(from: "\(USERS_BASE_PATH)/api/users?page=1", httpBody: nil) { (_ response: UsersResponse?, _ error: Error?) in
             requestExpectation.fulfill()
             
             if let response = response {

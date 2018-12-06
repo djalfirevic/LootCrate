@@ -27,6 +27,7 @@
 		C48C5E7E21B8581400A6B34F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C5E7D21B8581400A6B34F /* User.swift */; };
 		C48C5E8121B8591900A6B34F /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C5E8021B8591900A6B34F /* UsersResponse.swift */; };
 		C48C5E8421B8651800A6B34F /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C5E8321B8651800A6B34F /* PostCellViewModel.swift */; };
+		C48C5E8621B98E0F00A6B34F /* PostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C5E8521B98E0F00A6B34F /* PostsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		C48C5E7D21B8581400A6B34F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C48C5E8021B8591900A6B34F /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		C48C5E8321B8651800A6B34F /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
+		C48C5E8521B98E0F00A6B34F /* PostsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				C48C5E8021B8591900A6B34F /* UsersResponse.swift */,
+				C48C5E8521B98E0F00A6B34F /* PostsResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				C48C5E3F21B835A000A6B34F /* PostsViewController.swift in Sources */,
 				C48C5E7C21B84A2D00A6B34F /* String+Extensions.swift in Sources */,
 				C48C5E7821B83F1400A6B34F /* Date+Extensions.swift in Sources */,
+				C48C5E8621B98E0F00A6B34F /* PostsResponse.swift in Sources */,
 				C48C5E6821B8379E00A6B34F /* RESTManager.swift in Sources */,
 				C48C5E8421B8651800A6B34F /* PostCellViewModel.swift in Sources */,
 				C48C5E6721B8379E00A6B34F /* Logger.swift in Sources */,

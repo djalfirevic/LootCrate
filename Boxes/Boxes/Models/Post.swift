@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct Post {
+struct Post: Codable {
     
     // MARK: - Properties
     var title: String
-    var datePosted: Date
+    var datePosted: String
     var imageURL: String
     var comments: [Comment]?
     var author: User?
     
-    // MARK: - Designated Initializer
-    init(title: String, datePosted: Date, imageURL: String) {
-        self.title = title
-        self.datePosted = datePosted
-        self.imageURL = imageURL
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case datePosted
+        case imageURL
+        case comments
     }
     
 }
