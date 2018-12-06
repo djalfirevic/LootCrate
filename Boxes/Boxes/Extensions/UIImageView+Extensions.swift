@@ -22,10 +22,10 @@ extension UIImageView {
             DispatchQueue.global(qos: .userInitiated).async {
                 let data = try? Data(contentsOf: url)
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [weak self] in
                     if let data = data, url.absoluteString == imageUrl {
                         if let image = UIImage(data: data) {
-                            self.image = image
+                            self?.image = image
                             cache[imageUrl] = image
                         }
                     }
