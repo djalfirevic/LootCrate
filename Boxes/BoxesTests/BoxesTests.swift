@@ -27,8 +27,8 @@ class BoxesTests: XCTestCase {
             requestExpectation.fulfill()
             
             if let response = response {
-                XCTAssertNotNil(response, "✅ Fetching users successful")
-                XCTAssertTrue(response.data.count > 0, "✅ Fetching users successful")
+                XCTAssertNotNil(response, "🛑 Fetching users failed")
+                XCTAssertTrue(response.data.count > 0, "🛑 Fetching users failed")
             }
         }
         
